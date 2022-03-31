@@ -1,0 +1,4 @@
+{
+    "banca": "http://localhost:4500/banca",
+    "textfile": "assets/textfile.txt"
+}

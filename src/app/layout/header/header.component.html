@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-tsrk">
+    <a class="navbar-brand" href="#">Logo Empresa</a>
+    <button class="menu-mobile-button" (click)="div1Function()">
+      <i class="fa fa-bars"></i>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="task-menu nav-item">
+          <div class="btn-group">
+            
+          </div>
+        </li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <div class="box-login-user text-light">
+          <div class="name-user">
+            Usuario: <span class="name-value">{{userData.User}}</span>
+          </div>
+          <div class="balance-user">
+            Saldo: <span class="balance-value">{{userData.Amount}} {{userData.Coin}} </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="x"></div>

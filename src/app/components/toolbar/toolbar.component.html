@@ -1,0 +1,94 @@
+<mat-toolbar>
+  <!-- first toolbar -->
+  <mat-toolbar-row>
+    <mat-form-field id="hipo" appearance="fill">
+      <mat-label>Seleccionar Hipodromo</mat-label>
+      <mat-select [(ngModel)]="selectedHipodromoUID" name="hipo">
+        <mat-option
+          *ngFor="let hipo of hipodromosList; let i = index"
+          [value]="hipo.UID"
+          (click)="onSelectHipo(hipo)"
+        >
+          <span class="time-box"> {{ hipo.Fecha | date: 'shortTime' }}</span>
+          &nbsp; <span class="hipo-name">{{ hipo.Nombre }}</span> &nbsp;
+          <span class="race-info">{{ hipo.Clasificacion }}</span>
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field id="race" appearance="fill">
+      <mat-label>Seleccionar Carrera</mat-label>
+      <mat-select [(ngModel)]="selectedRaceUID" name="hipo">
+        <mat-option
+          *ngFor="let race of carrerasList; let i = index"
+          [value]="race.UID"
+          (click)="onSelectCarrera(race)"
+        >
+          <span class="hipo-name">{{ race.name }}</span> &nbsp;
+          <span class="hipo-name">{{ race.post_time }}</span>
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field id="bet" appearance="fill">
+      <mat-label>Apuesta</mat-label>
+      <mat-select [(ngModel)]="selectedBet" name="bet">
+        <!-- <mat-select-trigger>{{ selectedBet }}</mat-select-trigger> -->
+        <mat-option
+          *ngFor="let bet of kindOfBetsList; let i = index"
+          [value]="bet.UID"
+          (click)="onSelectTipoApuesta(bet)"
+        >
+          <span class="hipo-name">{{ bet.Nombre }}</span>
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field id="bet-value" appearance="fill">
+      <mat-label>Valor</mat-label>
+      <mat-select [(ngModel)]="selectedValueBet" name="betValue">
+        <mat-option
+          *ngFor="let betValue of betValueList; let i = index"
+          [value]="betValue.id"
+          (click)="onSelectValorApuesta(betValue.amount)"
+        >
+          <span class="hipo-name">{{ betValue.amount }} {{userData.Coin}}</span>
+        </mat-option>
+        <mat-option (click)="openDialog()"> Other </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- <section class="button-row">
+      <button mat-stroked-button color="primary">9:45 p.m</button>
+      <button mat-stroked-button color="primary">HCP</button>
+      <button mat-stroked-button color="primary">33$</button>
+      <button mat-stroked-button color="primary">2YO</button>
+      <button mat-stroked-button color="primary">6 1/F</button>
+      <a mat-stroked-button href="#" target="_blank">TURF: N/A</a>
+    </section> -->
+
+    <section id="last-section" class="button-row">
+      <button mat-stroked-button>PPS</button>
+      <button mat-stroked-button>VIDEO</button>
+    </section>
+  </mat-toolbar-row>
+  <!-- /first toolbar -->
+
+  <!-- second toolbar -->
+  <mat-toolbar-row>
+    
+    
+
+    <mat-card class="d-flex">
+      Seleccionados: &nbsp;
+      <span *ngFor="let item of selectedItems; let i = index">
+        {{ item.Number }} (Pos. {{item.Index}}) &nbsp;
+      </span>
+    </mat-card>
+
+    <!-- <section id="last-section" class="button-row">
+      <button mat-stroked-button (click)="openDialog()">Submit Bet</button>
+    </section> -->
+  </mat-toolbar-row>
+  <!-- /second toolbar -->
+</mat-toolbar>

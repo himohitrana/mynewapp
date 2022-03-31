@@ -1,0 +1,25 @@
+.race-slider {
+  max-width: 96%;
+  margin: 0 auto;
+  background-color: #042a51;
+}
+
+.slide {
+  border: 0.6px solid #094481;
+  border-left: white;
+}
+
+.slide-item {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+  color: white;
+}
+
+@media screen and (max-width:599px){
+  .race-slider {
+    width: 80%;
+  }
+}

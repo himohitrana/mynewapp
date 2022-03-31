@@ -1,0 +1,89 @@
+table {
+  width: 100%;
+}
+
+
+.mat-header-row {
+  background-color: #cccbcb;
+}
+
+.mat-column-position {
+  width: 32px;
+  border-right: 1px solid currentColor;
+  padding-right: 24px;
+  text-align: center;
+}
+
+.mat-column-circles {
+  padding-left: 16px;
+}
+
+.mat-column-runner-info {
+  padding-left: 16px;
+  font-size: 14px;
+}
+
+.circle-number-container {
+  background-color: #cccbcb;
+  display: block;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-number-container span {
+  font-size: 12px;
+}
+
+.circle-container-white {
+  background-color: #ffffff;
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: solid 1px aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.circle-container-clicked {
+  background-color: aqua;
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: solid 1px white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.circle-container-white span {
+  font-size: 8px;
+  color: aqua;
+}
+
+.odds-container,
+span {
+  font-size: 11px;
+}
+
+.name-bold {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+@media screen and (max-width:599px){
+  table.mat-table {
+    border-spacing: 0;
+    display: block;
+    width: 100%;
+    overflow: scroll;
+  }
+}

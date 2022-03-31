@@ -1,0 +1,20 @@
+<div class="race-slider">
+  <ngx-slick-carousel
+    class="carousel"
+    #slickModal="slick-carousel"
+    [config]="slideConfig"
+    (init)="slickInit($event)"
+    (breakpoint)="breakpoint($event)"
+    (afterChange)="afterChange($event)"
+    (beforeChange)="beforeChange($event)"
+  >
+    <div ngxSlickItem *ngFor="let race of races" class="slide">
+      <div class="slide-item">
+        <span class="slide-name">{{ race.name }}</span>
+        <!-- <span class="slide-date">{{ race.time }}</span> -->
+        <app-countdown raceDate={{race.datetime}}></app-countdown>
+        <!-- <span class="slide-date">{{ race.Fecha | date: 'shortTime'}}</span> -->
+      </div>
+    </div>
+  </ngx-slick-carousel>
+</div>

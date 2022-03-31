@@ -1,0 +1,78 @@
+.tipo-apuesta {
+  background-color: rgb(166, 199, 116);
+  border: 1px solid black;
+  border-radius: 5px;
+  color: black;
+  width: 3.5rem;
+  height: 32px;
+}
+
+.mat-card .mat-divider-horizontal {
+  position: relative;
+}
+
+.mat-card-actions,
+.mat-card-subtitle,
+.mat-card-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.mat-card-actions .mat-button,
+.mat-card-actions .mat-flat-button,
+.mat-card-actions .mat-stroked-button {
+  margin: 0 4px;
+}
+.whatsapp {
+  /* //position:fixed; */
+  width:60px;
+  height:60px;
+  bottom:40px;
+  right:40px;
+  background-color:#25d366;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  /* font-size:30px; */
+  z-index:100;
+}
+
+.whatsapp-icon {
+  /* margin-top:13px; */
+}
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  /* width: 30px;
+  height: 30px; */
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  text-align: center;
+  padding: 0;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.td-row .td-soicalmedia-btn{
+  display: flex;
+  margin-bottom: 20px;
+}
+.td-row .td-soicalmedia-btn button{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 10px;
+  border: unset;
+}

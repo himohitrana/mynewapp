@@ -1,0 +1,130 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- Position Column -->
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef>No.</th>
+    <td mat-cell *matCellDef="let element">
+      <div class="circle-number-container">
+        <span>
+          {{ element.number }}
+        </span>
+      </div>
+    </td>
+  </ng-container>
+
+  <!-- Circles Column -->
+    <ng-container matColumnDef="circles1">
+      <th mat-header-cell *matHeaderCellDef>
+        <div class="circle-container-white">
+          <span> 1 </span>
+        </div>
+      </th>
+      <td mat-cell *matCellDef="let element">
+        <div 
+        [ngClass]="getClass(element,1)"
+        (click)="addToFavourites(element,1)"
+        ></div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="circles2">
+      <th mat-header-cell *matHeaderCellDef>
+        <div class="circle-container-white">
+          <span> 2 </span>
+        </div>
+      </th>
+      <td mat-cell *matCellDef="let element">
+        <div 
+        [ngClass]="getClass(element,2)"
+        (click)="addToFavourites(element,2)"
+        ></div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="circles3">
+      <th mat-header-cell *matHeaderCellDef>
+        <div class="circle-container-white">
+          <span> 3 </span>
+        </div>
+      </th>
+      <td mat-cell *matCellDef="let element">
+        <div 
+        [ngClass]="getClass(element,3)"
+        (click)="addToFavourites(element,3)"
+        ></div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="circles4">
+      <th mat-header-cell *matHeaderCellDef>
+        <div class="circle-container-white">
+          <span> 4 </span>
+        </div>
+      </th>
+      <td mat-cell *matCellDef="let element">
+        <div 
+        [ngClass]="getClass(element,4)"
+        (click)="addToFavourites(element,4)"
+        ></div>
+      </td>
+    </ng-container>
+  <!-- odds Column -->
+  <ng-container matColumnDef="odds">
+    <th mat-header-cell *matHeaderCellDef>ODDS</th>
+    <td mat-cell *matCellDef="let element">
+      <div class="odds-container"><span>12</span><br /><span>M:18</span></div>
+    </td>
+  </ng-container>
+
+  <!-- pl Column -->
+  <ng-container matColumnDef="pl">
+    <th mat-header-cell *matHeaderCellDef>PL</th>
+    <!-- <td mat-cell *matCellDef="let element">{{ element.stall }}</td> -->
+    <td mat-cell *matCellDef="let element">20</td>
+  </ng-container>
+
+  <!-- runner-info Column -->
+  <ng-container matColumnDef="runner-info">
+    <th mat-header-cell *matHeaderCellDef>RUNNER INFO</th>
+    <td mat-cell *matCellDef="let element">
+      <div>
+        <span class="name-bold">{{ element.name }}</span
+        ><br /><span>Chestnut, Geldin 4 yrs (IN) L</span>
+      </div>
+    </td>
+  </ng-container>
+
+  <!-- jockey Column -->
+  <ng-container matColumnDef="jockey">
+    <th mat-header-cell *matHeaderCellDef>JOCKEY/RECORD</th>
+    <td mat-cell *matCellDef="let element">
+      <div>
+        <span class="name-bold">{{ element.jockey }}</span>
+        <br />
+        <span>12% 687 - 81 - 79 - 79</span>
+      </div>
+    </td>
+  </ng-container>
+
+  <!-- trainer Column -->
+  <ng-container matColumnDef="trainer">
+    <th mat-header-cell *matHeaderCellDef>TRAINER/RECORD</th>
+    <td mat-cell *matCellDef="let element">
+      <div>
+        <span class="name-bold">{{ element.trainer }}</span>
+        <br />
+        <span>11% 36 - 4 - 3 - 5</span>
+      </div>
+    </td>
+  </ng-container>
+
+  <!-- sire Column -->
+  <ng-container matColumnDef="sire">
+    <th mat-header-cell *matHeaderCellDef>SIRE/DAM</th>
+    <td mat-cell *matCellDef="let element">
+      <div>
+        <span class="name-bold">Giant Oak</span><br />
+        <span>Whoisvendeladente</span>
+      </div>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns" ></tr>
+</table>

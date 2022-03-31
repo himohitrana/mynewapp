@@ -1,0 +1,52 @@
+{
+  "apuestas": [
+    {
+      "ID": 1,
+      "nombre": "Win"
+    },
+    {
+      "ID": 2,
+      "nombre": "Place"
+    },
+    {
+      "ID": 3,
+      "nombre": "Show"
+    },
+    {
+      "ID": 4,
+      "nombre": "Double"
+    },
+    {
+      "ID": 5,
+      "nombre": "Exacta"
+    },
+    {
+      "ID": 6,
+      "nombre": "Trifecta"
+    },
+    {
+      "ID": 7,
+      "nombre": "Superfecta"
+    },
+    {
+      "ID": 8,
+      "nombre": "Pick-4"
+    },
+    {
+      "ID": 9,
+      "nombre": "Win/Place/Show"
+    },
+    {
+      "ID": 10,
+      "nombre": "Win/Place"
+    },
+    {
+      "ID": 11,
+      "nombre": "Win/Show"
+    },
+    {
+      "ID": 12,
+      "nombre": "Place/Show"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+<div class="mat-card">
+  <div class="d-flex justify-content-between">
+    <h2 mat-dialog-title>Detalle Apuesta</h2>
+    <span class="tipo-apuesta text-center py-1">{{tipoApuesta.Nombre}}</span>
+  </div>
+  <div class="mat-typography">
+    <div class="d-flex flex-column" style="margin-bottom: 8px">
+      <span> Hipodromo:<b>{{hipodromo.Nombre}} </b> </span>
+      <span> Carrera: <b>{{carrera.name}}</b> </span>
+      <span> Apuesta: <b>{{tipoApuesta.Nombre}}</b> </span>
+      <span> Caballos:<b>{{selectedDetailsItemsDescription}}</b> </span>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="d-flex justify-content-between" style="margin: 8px 0 8px 0">
+      <span>Monto:</span>
+      <span> {{valorApuesta}} {{userData.Coin}}</span>
+    </div>
+    <mat-divider></mat-divider>
+  </div>
+  <mat-card-actions>
+    <div class="td-row">
+      <div class="td-soicalmedia-btn">
+        <button shareButton="facebook"  [url]="this.url" [title]="this.title"
+        [description]="this.description" class="fa fa-facebook"></button>
+        <button shareButton="twitter"  [url]="this.url" [title]="this.title"
+        [description]="this.description" class="fa fa-twitter"></button>
+        <button shareButton="whatsapp"  [url]="this.url" [title]="this.title"
+        [description]="this.description" class="whatsapp"><i class="fa fa-whatsapp whatsapp-icon"></i></button> 
+      </div>
+      <div class="td-process-btn">
+        <button mat-stroked-button mat-dialog-close
+        mat-flat-button
+          color="primary"
+          cdkFocusInitial
+          (click)="onShareTicket()"
+          [disabled]="isDisabledToActionsTicket">Share Bet</button>
+        <button mat-stroked-button mat-dialog-close
+        mat-flat-button
+          color="primary"
+          cdkFocusInitial
+          (click)="onSaveTicket()"
+          [disabled]="isDisabledToActionsTicket">Save Bet</button>
+        <button
+          mat-flat-button
+          color="primary"
+          cdkFocusInitial
+          (click)="onSubmitTicket()"
+          [disabled]="isDisabledToActionsTicket">Submit Bet</button>
+      </div>
+    </div>
+   
+  </mat-card-actions>
+</div>

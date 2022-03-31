@@ -1,0 +1,47 @@
+[
+  {
+    "name": "AUSTRALIA B-RANDWICK",
+    "race": "R1",
+    "time": "9:50PM"
+  },
+  {
+    "name": "AUSTRALIA C-SUNSHINE COAST",
+    "race": "R1",
+    "time": "10:08PM"
+  },
+  {
+    "name": "AUSTRALIA D-PINJARRA",
+    "race": "R1",
+    "time": "11:39PM"
+  },
+  {
+    "name": "AUSTRALIA HARNESS (H)",
+    "race": "R1",
+    "time": "10:18PM"
+  },
+  {
+    "name": "FONNER PARK",
+    "race": "R5",
+    "time": "17MTP"
+  },
+  {
+    "name": "HK HAPPY VALLEY WED",
+    "race": "R1",
+    "time": "5:45AM"
+  },
+  {
+    "name": "JPN TOKYO CITY",
+    "race": "R1",
+    "time": "12:40AM"
+  },
+  {
+    "name": "PALM BEACH MAT (G)",
+    "race": "R15",
+    "time": "OFFICIAL"
+  },
+  {
+    "name": "WILL ROGERS DOWNS",
+    "race": "R10",
+    "time": "8MTP"
+  }
+]
